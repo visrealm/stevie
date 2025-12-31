@@ -40,6 +40,24 @@ setbin() {
           return          
           ;;
 
+        # F18a 48x80 sprite cursor
+        6080)
+          binary="stevie48s.bin"
+          return          
+          ;;
+
+        # F18a 48x80 character cursor
+        6081)
+          binary="stevie48t.bin"
+          return          
+          ;;
+
+        # F18a 60x80 sprite cursor
+        6080)
+          binary="stevie60s.bin"
+          return          
+          ;;
+
         # F18a 60x80 character cursor
         6081)
           binary="stevie60t.bin"

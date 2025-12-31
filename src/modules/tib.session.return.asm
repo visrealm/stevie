@@ -183,7 +183,7 @@ tib.run.return.stevie:
         ; Restore video mode & content
         ;-------------------------------------------------------
         bl    @vidtab               ; Load video mode table into VDP
-              data stevie.80x30     ; Equate selected video mode table
+              data stevie.80x60     ; Equate selected video mode table
 
         bl    @putvr                ; Turn on position based attributes
               data >3202            ; F18a VR50 (>32), bit 2

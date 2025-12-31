@@ -41,6 +41,24 @@ setbin() {
           return          
           ;;
 
+        # F18a 48x80 sprite cursor/ruler
+        4880)
+          binary="stevie48s.bin"
+          return          
+          ;;
+
+        # F18a 48x80 character cursor/ruler
+        4881)
+          binary="stevie48t.bin"
+          return          
+          ;;
+
+        # F18a 60x80 sprite cursor/ruler
+        6080)
+          binary="stevie60s.bin"
+          return          
+          ;;
+
         # F18a 60x80 character cursor
         6081)
           binary="stevie60t.bin"
@@ -91,6 +109,6 @@ fi
 
 # Copy final binary to output directory
 if [ -f "bin/$binary" ]; then
-   cp "bin/$binary" /Volumes/FINALGROM
-    log "Final binary copied to /Volumes/FINALGROM/$binary"
+   cp "bin/$binary" /mnt/c/Users/troys/OneDrive/Desktop/rccroms/
+    log "Final binary copied to /mnt/c/Users/troys/OneDrive/Desktop/rccroms/$binary"
 fi

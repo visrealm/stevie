@@ -61,10 +61,21 @@ main.continue:
         bl    @f18unl               ; Unlock the F18a
                 
         .ifge vdpmode, 3080
+        .ifle vdpmode, 3100
 
         bl    @putvr                ; Turn on 30 rows mode.
               data >3140            ; F18a VR49 (>31), bit 40
 
+        .endif
+        .endif
+                
+        .ifge vdpmode, 6080
+        .ifle vdpmode, 6100
+
+        bl    @putvr                ; Turn on 30 rows mode.
+              data >3140            ; F18a VR49 (>31), bit 40
+
+        .endif
         .endif
 
         bl    @putvr                ; Turn on position based attributes
